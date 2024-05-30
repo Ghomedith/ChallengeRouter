@@ -1,0 +1,19 @@
+<p>user-profile works!</p>
+
+<div class="card">
+  <header>
+    <img src="{{ user.photo }}" alt="{{ user.name }}" />
+  </header>
+  <main>
+    <p>Nom : {{ user.name }}</p>
+    <p>Prénom : {{ user.firstName }}</p>
+    <p>{{ user.quote }}</p>
+    <div>
+      <input type="text" [(ngModel)]="user.quote" />
+    </div>
+  </main>
+  <footer style="margin-top: 20px">
+    <button (click)="watchAge()">Afficher/masquer mon âge</button>
+    <div [hidden]="isShow">{{ user.age }}</div>
+  </footer>
+</div>
